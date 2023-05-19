@@ -102,5 +102,3 @@ class DocumentGenerator():
         with open(self.output_path + self.pmc_id + '_' + query.replace(' ', '_') + '.txt', 'wt') as f:
             f.write('|'.join(self.docs))
         return self.docs
-
-

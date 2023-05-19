@@ -52,6 +52,8 @@ class PubmedJSONParser():
                 text_type = passage['text']
                 # print('text type changed here to:', text_type)
             else:
+                if text_type not in output[section_type].keys():
+                    output[section_type][text_type] = []
                 output[section_type][text_type].append(passage['text'])
 
             curr_section_type = section_type
